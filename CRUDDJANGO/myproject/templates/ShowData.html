@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% if emps %}
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Gender</th>
+        </tr>
+
+            {% for e in emps %}
+        <tr>
+            <td>{{ e.Id }}</td>
+            <td>{{ e.name }}</td>
+            <td>{{ e.email }}</td>
+            <td>{{ e.Gender }}</td>
+               </tr>
+            {% endfor %}
+
+    </table>
+    {% else %}
+    <h1>No Data</h1>
+    {% endif %}
+
+</body>
+</html>
